@@ -26,7 +26,7 @@ export const backgroundColors = {
     cyan: '\x1b[46m',
     white: '\x1b[47m',
 };
-export const contrast = {
+export const contrast: { [index: string]: BackgroundColorOption } = {
     black: 'white',
     red: 'black',
     green: 'black',
@@ -36,3 +36,8 @@ export const contrast = {
     cyan: 'black',
     white: 'black',
 };
+
+export type EffectOption = keyof typeof effects;
+export type FontColorOption = keyof typeof fontColors;
+export type BackgroundColorOption = keyof typeof backgroundColors;
+export type ContrastOption = keyof typeof contrast;
